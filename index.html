@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ricardo Pérez-Solero · Contact</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #0d1117;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #e6edf3;
+      padding: 2rem;
+    }
+
+    .card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      max-width: 360px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: #e6edf3;
+    }
+
+    .title {
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      color: #8b949e;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #238636;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.75rem 1.75rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .btn:hover { background: #2ea043; }
+
+    .note {
+      margin-top: 1.2rem;
+      font-size: 0.78rem;
+      color: #484f58;
+    }
+
+    .links {
+      margin-top: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .links a {
+      font-size: 0.8rem;
+      color: #58a6ff;
+      text-decoration: none;
+    }
+
+    .links a:hover { text-decoration: underline; }
+  </style>
+
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "569f2feb787c40d1929613f5372fb50d"}'></script>
+</head>
+<body>
+  <div class="card">
+    <h1>Ricardo Pérez-Solero</h1>
+    <p class="title">Communications &amp; PR Consultant</p>
+    <a class="btn" href="ricardo.vcf" download="Ricardo-Perez-Solero.vcf">
+      Save Contact
+    </a>
+    <p class="note">Download and open to add to your contacts</p>
+    <div class="links">
+      <a href="https://communication.ricardoperezsolero.com" target="_blank">communication.ricardoperezsolero.com</a>
+      <a href="https://www.linkedin.com/in/ricardoperezsolero" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+
+  <script>
+    // On mobile/tablet: redirect directly to VCF for native contact prompt
+    // On desktop: show the landing page above
+    var ua = navigator.userAgent;
+    var isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(ua);
+    if (isMobile) {
+      window.location.href = 'ricardo.vcf';
+    }
+  </script>
+</body>
+</html>
