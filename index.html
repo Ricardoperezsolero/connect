@@ -78,6 +78,8 @@
     }
 
     .links a:hover { text-decoration: underline; }
+
+    .card { display: none; }
   </style>
 
   <!-- Cloudflare Web Analytics -->
@@ -98,12 +100,12 @@
   </div>
 
   <script>
-    // On mobile/tablet: redirect directly to VCF for native contact prompt
-    // On desktop: show the landing page above
     var ua = navigator.userAgent;
     var isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(ua);
     if (isMobile) {
       window.location.href = 'ricardo.vcf';
+    } else {
+      document.querySelector('.card').style.display = 'block';
     }
   </script>
 </body>
